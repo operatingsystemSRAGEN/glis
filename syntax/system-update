@@ -22,10 +22,10 @@ apt-get update -y > /dev/null
 apt-get -f install > /dev/null
 clear
 echo -e ""$m"Pemeriksaan..!!!!"
-rm -rf /opt/glis/ > /dev/null
 git clone https://github.com/operatingsystemSRAGEN/glis.git /opt/glis > /dev/null
 chmod -R 755 /opt/glis/syntax/ > /dev/null
 cp /opt/glis/syntax/* /usr/bin > /dev/null
+rm -rf /opt/glis/ > /dev/null
 clear
 echo -e ""$h"Selesai"
 sleep 2
