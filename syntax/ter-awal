@@ -8,5 +8,5 @@ clear
 echo -e "========  ==     ==  ====   "$m"GNU/Linux Sragen Versi 1"
 echo -e "==        ==     ==  =      "$k"Website : glis-linux.com"
 echo -e "==  ====  ==     ==  ====   "$h"Repo : github.com/operatingsystemSRAGEN/glis"
-echo -e "==   ===  ==     ==     =   "$b"Harus di Update sebelum :"$n"1 januari 2018"
+echo -e "==   ===  ==     ==     =   "$b"Harus di Update sebelum :"$n"1 Desember 2017"
 echo -e "========  =====  ==  ====   "$n"Author : Developer Team GNU/Linux Sragen"
