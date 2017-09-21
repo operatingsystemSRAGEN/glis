@@ -1,0 +1,41 @@
+#!/bin/bash
+m="\033[1;31m"
+k="\033[1;33m"
+h="\033[1;32m"
+b="\033[1;34m"
+kerja(){
+clear
+echo -e ""$b"Tunggu Sedang Proses Update"$k"."
+sleep 1
+clear
+echo -e ""$b"Tunggu Sedang Proses Update"$k".."
+sleep 1   
+clear
+echo -e ""$b"Tunggu Sedang Proses Update"$k"..."
+sleep 1   
+clear
+echo -e ""$b"Tunggu Sedang Proses Update"$k"...."
+sleep 1   
+clear
+echo -e ""$b"Tunggu Sedang Proses Update"$k".....[Updating-wait]"
+apt-get update -y > /dev/null
+apt-get -f install > /dev/null
+clear
+echo -e ""$m"Pemeriksaan..!!!!"
+rm -rf /opt/glis/
+git clone https://github.com/operatingsystemSRAGEN/glis.git /opt/glis > /dev/null
+chmod -R 755 /opt/glis/syntax/ > /dev/null
+cp /opt/glis/syntax/* /usr/bin > /dev/null
+clear
+echo -e ""$h"Selesai"
+sleep 2
+clear
+exit
+}
+if [[ `whoami` == 'root' ]]; then
+  clear
+  kerja
+else
+  clear
+  echo -e ""$m"Kamu belum masuk sebagai user root."
+fi
