@@ -1,0 +1,54 @@
+#!/bin/bash
+m="\033[1;31m"
+k="\033[1;33m"
+h="\033[1;32m"
+b="\033[1;34m"
+n="\033[1;0m"
+
+a_upgrade() {
+sleep 1
+echo -e ""$m"Checking internet Connection"$b"."
+sleep 1
+clear
+echo -e ""$m"Checking internet Connection"$b".."
+sleep 1
+clear 
+echo -e ""$m"Checking internet Connection"$b"..."
+sleep 1
+clear 
+echo -e ""$m"Checking internet Connection"$b"...."
+sleep 1 
+clear
+echo -e ""$m"Checking internet Connection"$b"....."
+sleep 1
+clear
+wget -q --tries=10 --timeout=20 --spider https://google.com
+clear
+if [[ $? -eq 0 ]]; then
+echo -e ""$h"[+] Anda dalam keadaan online !"
+clear
+echo -e ""$b"Sedang dalam Proses upgrade "$k"."
+clear
+sleep 1
+echo -e ""$b"Sedang dalam Proses upgrade "$k".."
+clear 
+sleep 1
+echo -e ""$b"Sedang dalam Proses upgrade "$k"..."
+apt update -y > /dev/null 2>&1 
+clear
+echo -e ""$k"Selesai ! " 
+sleep 2
+clear
+else
+echo -e ""$m"[-]Maaf anda dalam keadaan offline"
+sleep 2
+clear
+exit
+fi
+}
+
+if [[ upgrade == upgrade ]]; then
+	a_upgrade
+          exit
+fi
+
